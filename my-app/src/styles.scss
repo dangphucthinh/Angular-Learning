@@ -1,0 +1,9 @@
+$primary: #69ff71;
+$button-text: #201ddb;
+
+// styles.scss
+@import "~@progress/kendo-theme-default/dist/all.scss";
+
+.k-button.k-bare, .k-button.k-bare:hover{
+    color: $button-text;
+}

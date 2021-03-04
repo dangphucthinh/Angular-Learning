@@ -23,7 +23,7 @@
             "outputPath": "dist/my-app",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": "src/polyfills.ts", 
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
@@ -34,7 +34,7 @@
               {
                 "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
               },
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
