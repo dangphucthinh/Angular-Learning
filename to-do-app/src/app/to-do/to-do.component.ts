@@ -32,7 +32,7 @@ export class ToDoComponent  {
     input.value = '';
   }
 
-  removeTodos(todo: any, i: any){
+  removeTodos(i: any){
     this.todos.splice(i, 1)
   }
 }

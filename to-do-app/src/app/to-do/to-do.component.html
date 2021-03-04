@@ -15,9 +15,13 @@
                 type="button"
                 class="todo"
                 *ngFor="let todo of todos; index as i">
-            <span>
+            <span (click) = "removeTodos(i)">
                 {{todo.item}}
             </span>    
         </button>
+    </div>
+
+    <div *ngIf="todos.length == 0" class="finished-list">
+        Nothing to show
     </div>
 </div>
