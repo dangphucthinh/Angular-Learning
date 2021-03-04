@@ -12,11 +12,19 @@ import { Component, OnInit } from '@angular/core';
     <h2> test = {{ 2 + 4}}</h2>
     <h2> {{"name = " + 2 + 4}}</h2>
     <h2> {{name.length + " " + name.toUpperCase()}} </h2>
+    <input [id] = "myId" type = text value = "cacacacac">
+    <input id = {{myId}} type = text value = "123123123">
+    <input disabled = {{false}} id = {{myId}} type = text value = "123123123">
+    <input disabled = "idDisabled" id = {{myId}} type = text value = "123123123">
     `
 })
 export class TestComponent implements OnInit {
 
   public name = "hihi"
+  
+  public myId = "testId"
+
+  public isDisabled = "true"
 
   constructor() { }
 
