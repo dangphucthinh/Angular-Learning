@@ -1,0 +1,39 @@
+<div class="k-block">
+    <button kendoButton [look] = "'default'">
+        default button
+    </button>
+    <button kendoButton [look] = "'outline'">
+        outline button
+    </button>
+    <button kendoButton [look] = "'bare'">
+        bare button
+    </button>
+    <button kendoButton [disabled] = "true">
+        kendoButton button
+    </button>
+</div>
+
+
+<button kendoButton [primary] = "true" [icon] = "'check'">
+    Primary button
+</button>
+
+<button kendoButton [toggleable] = "true" [icon] = "'calendar'">
+    Primary button
+</button>
+
+
+<kendo-buttongroup [width] = "'100'" [look] = "'outline'">
+
+    <button kendoButton [icon] = "'calendar'" (click)="hihi()">
+        Primary button
+    </button>
+
+    <button kendoButton [toggleable] = "true" [icon] = "'user'">
+        Primary button
+    </button>
+
+    <button kendoButton [toggleable] = "true" [icon] = "'check'">
+        Primary button
+    </button>
+</kendo-buttongroup>
