@@ -18,6 +18,7 @@
             <span (click) = "removeTodos(i)">
                 {{todo.item}}
             </span>    
+            <kendo-timepicker [(value)]="todo.due"></kendo-timepicker>
         </button>
     </div>
 
