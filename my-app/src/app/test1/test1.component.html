@@ -1,1 +1,28 @@
 <p class="text-success">test1 works!</p>
+
+
+<button kendoButton [primary] = "true" (click)="this.onclick()">
+    Primary button
+</button>
+
+<!-- <div *ngIfElse =this.isClick>
+    <kendo-floatinglabel text="First Name">
+        <kendo-textbox [style.width.px]="200" [clearButton]="true"></kendo-textbox>
+    </kendo-floatinglabel>
+    <kendo-floatinglabel text="last Name">
+        <kendo-textbox [style.width.px]="200" [clearButton]="true"></kendo-textbox>
+    </kendo-floatinglabel>
+</div> -->
+<div>
+    <ng-template [ngIf]="this.isClick" [ngIfElse] = "elseBlock">
+        <kendo-floatinglabel text="last Name">
+            <kendo-textbox [style.width.px]="200" [clearButton]="true"></kendo-textbox>
+        </kendo-floatinglabel>
+    </ng-template>
+    <ng-template #elseBlock>
+        <kendo-floatinglabel text="First Name">
+            <kendo-textbox [style.width.px]="200" [clearButton]="true"></kendo-textbox>
+        </kendo-floatinglabel>
+    </ng-template>
+</div>
+
