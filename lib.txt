@@ -1,0 +1,5 @@
+ng add @progress/kendo-angular-buttons
+ng add @progress/kendo-angular-dropdowns
+ng add @progress/kendo-angular-inputs
+npm install --save @progress/kendo-theme-default
+ng add @progress/kendo-angular-label
