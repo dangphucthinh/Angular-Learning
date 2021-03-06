@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,22 +8,30 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { ProgressBarModule } from '@progress/kendo-angular-progressbar';
 import { ButtonComponent } from './Component/button/button.component';
 import { InputComponent } from './Component/input/input.component';
-import { AppRoutingComponent } from './app-routing/app-routing.component';
+import { TestComponent } from './Component/test/test.component';
+import { AppRoutingModule } from './app-routing.module';
+import { LabelModule } from '@progress/kendo-angular-label';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
     InputComponent,
-    AppRoutingComponent
+    TestComponent
   ],
   imports: [
     BrowserModule,
     ButtonsModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     DropDownsModule,
     InputsModule,
-    ProgressBarModule
+    ProgressBarModule,
+    LabelModule,
+    DateInputsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

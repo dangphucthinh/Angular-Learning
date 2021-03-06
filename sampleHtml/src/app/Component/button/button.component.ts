@@ -12,4 +12,9 @@ export class ButtonComponent implements OnInit {
   private router: Router
   ngOnInit(): void {
   }
+
+  onClick(){
+    console.log("12213123123")
+    alert("Hello! I am an alert box!");
+  }
 }
