@@ -12,6 +12,7 @@ import { TestComponent } from './Component/test/test.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -31,7 +32,8 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
     InputsModule,
     ProgressBarModule,
     LabelModule,
-    DateInputsModule
+    DateInputsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

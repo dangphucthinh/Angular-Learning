@@ -7,7 +7,9 @@ import { Router, RouterLink } from '@angular/router';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-
+  public firstName: string;
+  public lastName: string;
+  public email: string;
   constructor() { }
   private router: Router
   ngOnInit(): void {
