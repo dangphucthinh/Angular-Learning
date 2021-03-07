@@ -10,6 +10,7 @@ export class ButtonComponent implements OnInit {
   public firstName: string;
   public lastName: string;
   public email: string;
+  public isClick : false
   constructor() { }
   private router: Router
   ngOnInit(): void {

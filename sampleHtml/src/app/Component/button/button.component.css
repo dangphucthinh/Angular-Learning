@@ -7,3 +7,14 @@ button {
 kendo-buttongroup button{
     margin: 0;
 }
+
+.example {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.k-form kendo-label:not(:last-of-type) {
+    flex-direction: column;
+    margin-bottom: 10px;
+}

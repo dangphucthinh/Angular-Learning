@@ -1,11 +1,31 @@
-<kendo-floatinglabel text="First Name">
-    <kendo-textbox [style.width.px]="200" [clearButton]="true"></kendo-textbox>
-</kendo-floatinglabel>
+<div class="example">
+    <form class="k-form" [formGroup]="form">
+        <label>
+            Name*
+            <input kendoTextBox [formControlName]="'fullName'" />
+        </label>
+        <label>
+            Email*
+            <kendo-textbox [formControlName]="'email'" [clearButton]="true"></kendo-textbox>
+        </label>
+       
+    </form>
 
-<kendo-floatinglabel text="First Name">
-    <kendo-textbox [style.width.px]="200" [clearButton]="true"></kendo-textbox>
-</kendo-floatinglabel>
+     <form class="k-form" [formGroup]="form">
+        <label>
+            Phone Number*
+            <input ng-model="contactRegex" required name="anim" class="my-input" kendoTextBox/>
+        </label>
+        <ng-template [ngIf]="this.isClick" [ngIfElse] = "elseBlock">
+            <kendo-floatinglabel text="last Name">
+                <kendo-textbox [clearButton]="true"></kendo-textbox>
+            </kendo-floatinglabel>
+        </ng-template>
+        <ng-template #elseBlock>
+            <kendo-floatinglabel text="First Name">
+                <kendo-textbox [clearButton]="true"></kendo-textbox>
+            </kendo-floatinglabel>
+        </ng-template>
+    </form>
+</div>
 
-<kendo-floatinglabel text="First Name">
-    <kendo-textbox [style.width.px]="200" [clearButton]="true"></kendo-textbox>
-</kendo-floatinglabel>

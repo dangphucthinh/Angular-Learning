@@ -1,30 +1,7 @@
-<button 
+<div class="example">
+    <button
     kendoButton [primary] = "true" 
-    routerLink = "/test"
     >
     Edit
 </button>
-
-<div class="wrapper">
-    <h5>Associate by a template reference</h5>
-    <kendo-label
-        text="Enter First Name"
-        [for]="nameInput">
-    </kendo-label>
-    <input #nameInput [(ngModel)]="firstName" kendoTextBox name="firstName" />
-</div>
-<div class="wrapper">
-    <h5>Associate by an element's id</h5>
-    <kendo-label
-        text="Enter Last Name"
-        for="last-name">
-    </kendo-label>
-    <input [(ngModel)]="lastName" kendoTextBox name="lastName" id="last-name" />
-</div>
-<div class="wrapper">
-    <h5>Wrap the input</h5>
-    <kendo-label
-        text="Enter Email">
-        <input [(ngModel)]="email" kendoTextBox name="email" />
-    </kendo-label>
 </div>
