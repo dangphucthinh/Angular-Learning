@@ -11,7 +11,7 @@ export class InputComponent implements OnInit {
   public textBoxValue =  ''
   public form: FormGroup
   public contactRegex = /^\d{8,12}$/
-  public isClick = false
+  public isClick = true
   public data: any = {
       fullName: '',
       phoneNumber: '',

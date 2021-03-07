@@ -2,7 +2,16 @@
     <form class="k-form" [formGroup]="form">
         <label>
             Name*
-            <input kendoTextBox [formControlName]="'fullName'" />
+           
+
+            <ng-template [ngIf]="this.isClick" [ngIfElse] = "elseBlock">
+                <h4>
+                    hohoh
+                </h4>
+            </ng-template>
+            <ng-template #elseBlock>
+                <input kendoTextBox [formControlName]="'fullName'" />
+            </ng-template>
         </label>
         <label>
             Email*
@@ -27,5 +36,14 @@
             </kendo-floatinglabel>
         </ng-template>
     </form>
+</div>
+
+<div class="example">
+    <button
+    kendoButton [primary] = "true" 
+    (click)= "onClick()"
+    >
+    Edit
+</button>
 </div>
 
