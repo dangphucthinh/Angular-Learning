@@ -32,6 +32,9 @@
                 </div>
                 <div *ngIf="!this.isClick">
                 <input formControlName="phoneNumber" [(ngModel)]="this.data.phoneNumber">
+                <kendo-formhint>Your phone number</kendo-formhint>
+                <kendo-formerror *ngIf="form.controls.phoneNumber.errors?.pattern">It should be numberic</kendo-formerror>
+                <kendo-formerror *ngIf="form.controls.phoneNumber.errors?.required">Error: Phone number is required</kendo-formerror>
                 </div>
             </label>
         </div>
