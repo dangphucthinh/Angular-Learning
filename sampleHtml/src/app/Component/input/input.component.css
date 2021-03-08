@@ -60,3 +60,18 @@ button {
     width: 100px;
     height: 40px;
 }
+
+.field-value {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: large;
+}
+
+label {
+    font-size: 17px;
+}
+
+.k-form kendo-combobox{
+    margin: 10px 0;
+    width: 204px;
+}

@@ -13,9 +13,9 @@ export class InputComponent implements OnInit {
   public contactRegex = /^\d{8,12}$/
   public isClick = true
   public data: any = {
-      fullName: '',
-      phoneNumber: '',
-      email: '', 
+      fullName: 'Oscar',
+      phoneNumber: '0123456789',
+      email: 'oscar@enclave.vn', 
       gender : [
         'Male',
         'Female',
@@ -24,11 +24,14 @@ export class InputComponent implements OnInit {
       ]  
     };
 
+  public listItems: Array<string> = ['Small', 'Medium', 'Large'];
+  public selectedValue = 'Male';
 
   constructor() { 
-    this.form = new FormGroup({
+    const contactRegex = /^\d{8,12}$/
+      this.form = new FormGroup({
       fullName: new FormControl(this.data.fullName, [Validators.required]),
-      phoneNumber : new FormControl(this.data.phoneNumber, [Validators.required]),
+      phoneNumber : new FormControl(this.data.phoneNumber, [Validators.required, Validators.pattern(contactRegex)]),
       email: new FormControl(this.data.email, [Validators.required, Validators.email]),
       gender : new FormControl(this.data.gender, Validators.required)
     })
@@ -40,6 +43,7 @@ export class InputComponent implements OnInit {
 
   onClick(){
     this.isClick = !this.isClick
+    console.log(this.form.controls.email)
   }
 
 }
