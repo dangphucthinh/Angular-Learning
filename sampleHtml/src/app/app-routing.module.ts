@@ -1,11 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { TestComponent } from './Component/test/test.component';
 import { InputComponent } from './Component/input/input.component';
+import { ButtonComponent } from './Component/button/button.component';
 
 export const routes: Routes = [
     {
-        path: 'test', component: TestComponent,       
+        path: '', component: ButtonComponent,       
     },
     {
         path: 'input', component: InputComponent
