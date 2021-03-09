@@ -14,8 +14,8 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent } from './Component/index/index.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './User/login/login.component';
+import { RegisterComponent } from './User/register/register.component';
 
 
 
@@ -25,7 +25,6 @@ import { RegisterComponent } from './register/register.component';
     ButtonComponent,
     InputComponent,
     IndexComponent,
-    RegisterComponent,
     LoginComponent,
     LoginComponent,
     RegisterComponent

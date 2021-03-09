@@ -1,15 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { TextBoxComponent } from '@progress/kendo-angular-inputs';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  // styleUrls: ['src/styles.css']
+  styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent{
+  @ViewChild('password') public textbox: TextBoxComponent;
 
-  constructor() { }
+    // public ngAfterViewInit(): void {
+    //     this.textbox.input.nativeElement.type = 'password';
+    // }
 
-  ngOnInit(): void {
-  }
+    public toggleVisibility(): void {
+        const inputEl = this.textbox.input.nativeElement;
+        inputEl.type = inputEl.type === 'password' ? 'text' : 'password';
+    }
 
+    public form: FormGroup = new FormGroup({
+        username: new FormControl(),
+        password: new FormControl(),
+        loggedin: new FormControl()
+    });
+
+    public login(): void {
+        this.form.markAllAsTouched();
+    }
+
+    public clearForm(): void {
+        this.form.reset();
+    }
 }
