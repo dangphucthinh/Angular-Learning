@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*-----------------------------------------------------------------------------
     Sample HTML Project
 -------------------------------------------------------------------------------
@@ -211,123 +212,9 @@ textarea.field {
 .grid {
     margin-top: -15px;
     margin-left: -15px;
+=======
+.wrapper{
+>>>>>>> 30be659e8ccaa5202c38aa7c84b5752804301669
     display: flex;
-    flex-wrap: wrap;
-}
-
-.grid__block {
-    width: 100%;
-    padding-top: 15px;
-    padding-left: 15px;
-}
-
-.grid__block.full-- {
-    width: 100%;
-}
-
-@media (min-width: 480px) {
-    .grid {
-        margin-top: -20px;
-        margin-left: -20px;
-    }
-
-    .grid__block {
-        padding-top: 20px;
-        padding-left: 20px;
-    }
-}
-
-@media (min-width: 640px) {
-    .grid__block {
-        width: 50%;
-    }
-}
-
-
-
-
-/*-----------------------------------------------------------------------------
-    ` Components - $ Section
------------------------------------------------------------------------------*/
-
-.section {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-@media (min-width: 480px) {
-    .section {
-        padding-top: 45px;
-        padding-bottom: 45px;
-    }
-}
-
-@media (min-width: 640px) {
-    .section {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-}
-
-
-
-
-/*-----------------------------------------------------------------------------
-    ` Components - $ Wrapper
------------------------------------------------------------------------------*/
-
-.wrapper {
-    max-width: 840px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-
-/*-----------------------------------------------------------------------------
-	$ Site
-/*-----------------------------------------------------------------------------
-    ` Site - $ Site Header
------------------------------------------------------------------------------*/
-
-.site-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: #333;
-    color: #fff;
-}
-    .site-header__logo {
-        width: 25px;
-        height: 25px;
-        margin-right: 5px;
-        vertical-align: middle;
-    }
-
-
-
-
-/*-----------------------------------------------------------------------------
-    ` Site - $ Site Main
------------------------------------------------------------------------------*/
-
-.site-main {
-    padding-top: 49px; /* Height of Site Header */
-}
-
-
-
-
-/*-----------------------------------------------------------------------------
-    $ Utilities
------------------------------------------------------------------------------*/
-
-.ta-c {
-    text-align: center;
+    justify-content: center;
 }
