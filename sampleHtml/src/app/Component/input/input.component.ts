@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { isCheckEmail } from 'src/app/Utilities/UtilsRegex';
 
 @Component({
   selector: 'app-input',
@@ -32,10 +33,9 @@ export class InputComponent implements OnInit {
       this.form = new FormGroup({
       fullName: new FormControl(this.data.fullName, [Validators.required]),
       phoneNumber : new FormControl(this.data.phoneNumber, [Validators.required, Validators.pattern(contactRegex)]),
-      email: new FormControl(this.data.email, [Validators.required, Validators.email]),
+      email: new FormControl(this.data.email, [Validators.required, Validators.email, Validators.pattern(isCheckEmail)]),
       gender : new FormControl(this.data.gender, Validators.required)
     })
-
   }
 
   ngOnInit(): void {
@@ -43,7 +43,5 @@ export class InputComponent implements OnInit {
 
   onClick(){
     this.isClick = !this.isClick
-    console.log(this.form.controls.email)
   }
-
 }
