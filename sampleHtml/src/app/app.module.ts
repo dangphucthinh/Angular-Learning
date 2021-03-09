@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent } from './Component/index/index.component';
 import { LoginComponent } from './User/login/login.component';
 import { RegisterComponent } from './User/register/register.component';
+import { MessageControlComponent } from './Component/message-control/message-control.component';
 
 
 
@@ -27,7 +28,8 @@ import { RegisterComponent } from './User/register/register.component';
     IndexComponent,
     LoginComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    MessageControlComponent
   ],
   imports: [
     BrowserModule,
