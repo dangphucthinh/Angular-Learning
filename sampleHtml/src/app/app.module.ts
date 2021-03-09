@@ -8,12 +8,14 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { ProgressBarModule } from '@progress/kendo-angular-progressbar';
 import { ButtonComponent } from './Component/button/button.component';
 import { InputComponent } from './Component/input/input.component';
-import { TestComponent } from './Component/test/test.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { IndexComponent } from './Component/index/index.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -22,7 +24,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     ButtonComponent,
     InputComponent,
-    TestComponent
+    IndexComponent,
+    RegisterComponent,
+    LoginComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

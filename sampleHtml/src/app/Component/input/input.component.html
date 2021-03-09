@@ -1,61 +1,81 @@
-<form class="k-form" [formGroup]="form">
-    <div class="grid">
-        <div class="grid__block">
-            <label>
-                Name*
-                <div class="field-value" *ngIf="this.isClick">
-                {{this.data.fullName}}
-                </div>
-                <div *ngIf="!this.isClick">
-                <input formControlName="fullName" [(ngModel)]="this.data.fullName">
-                </div>
-            </label>
-        </div>
+<header class="site-header">
+    <div class="wrapper">
+        Sample HTML Project
+    </div>
+</header>
 
-        <div class="grid__block">
-            <label>
-                Email*
-                <div class="field-value" *ngIf="this.isClick">
-                {{this.data.email}}
-                </div>
-                <div *ngIf="!this.isClick">
-                <input formControlName="email" [(ngModel)]="this.data.email">
-                </div>
-            </label>
-        </div>
 
-        <div class="grid__block">
-            <label>
-                Phone number*
-                <div class="field-value" *ngIf="this.isClick">
-                {{this.data.phoneNumber}}
+<main class="site-main">
+    <div class="section">
+        <div class="wrapper">
+            <form class="k-form" [formGroup]="form">
+                <div class="grid">
+                    <div class="grid__block">
+                        <label>
+                            Name*
+                            <div class="field-value" *ngIf="this.isClick">
+                            {{this.data.fullName}}
+                            </div>
+                            <div *ngIf="!this.isClick">
+                            <input formControlName="fullName" [(ngModel)]="this.data.fullName">
+                            </div>
+                        </label>
+                    </div>
+            
+                    <div class="grid__block">
+                        <label>
+                            Email*
+                            <div class="field-value" *ngIf="this.isClick">
+                            {{this.data.email}}
+                            </div>
+                            <div *ngIf="!this.isClick">
+                            <input formControlName="email" [(ngModel)]="this.data.email">
+                            </div>
+                        </label>
+                    </div>
+            
+                    <div class="grid__block">
+                        <label>
+                            Phone number*
+                            <div class="field-value" *ngIf="this.isClick">
+                            {{this.data.phoneNumber}}
+                            </div>
+                            <div *ngIf="!this.isClick">
+                            <input formControlName="phoneNumber" [(ngModel)]="this.data.phoneNumber">
+                            <kendo-formhint>Your phone number</kendo-formhint>
+                            <kendo-formerror *ngIf="form.controls.phoneNumber.errors?.pattern">It should be numberic</kendo-formerror>
+                            <kendo-formerror *ngIf="form.controls.phoneNumber.errors?.required">Error: Phone number is required</kendo-formerror>
+                            </div>
+                        </label>
+                    </div>
+            
+                    <div class="grid__block">
+                        <label>
+                            Name*
+                            <div class="field-value" *ngIf="this.isClick">
+                            {{selectedValue}}
+                            </div>
+                            <div *ngIf="!this.isClick">
+                            <kendo-combobox formControlName= "gender" [data]="this.data.gender" [(ngModel)]="selectedValue"></kendo-combobox>
+                            </div>
+                        </label>
+                    </div>
                 </div>
-                <div *ngIf="!this.isClick">
-                <input formControlName="phoneNumber" [(ngModel)]="this.data.phoneNumber">
-                </div>
-            </label>
-        </div>
+            </form>
 
-        <div class="grid__block">
-            <label>
-                Name*
-                <div class="field-value" *ngIf="this.isClick">
-                {{selectedValue}}
-                </div>
-                <div *ngIf="!this.isClick">
-                <kendo-combobox formControlName= "gender" [data]="this.data.gender" [(ngModel)]="selectedValue"></kendo-combobox>
-                </div>
-            </label>
+            <div class="example">
+                <button
+                kendoButton [primary] = "true" 
+                (click)= "onClick()"
+                >
+                Edit
+            </button>
+            </div>
         </div>
     </div>
-</form>
+</main>
 
 
-<div class="example">
-    <button
-    kendoButton [primary] = "true" 
-    (click)= "onClick()"
-    >
-    Edit
-</button>
-</div>
+
+
+
