@@ -4,10 +4,11 @@ import { environment } from "src/environments/environment";
 import { Token } from "@angular/compiler/src/ml_parser/lexer";
 import { UserSave } from "../Component/Shared/user.model";
 import { JwtHelperService } from "@auth0/angular-jwt";
-import { Observable } from "rxjs";
+import { Observable, Observer } from "rxjs";
 import { LoginResponse } from "../Component/Shared/user.response";
 import { map } from 'rxjs/operators';
 import { ACCESS_TOKEN, CURRENT_USER } from "../Utilities/UtilsRegex";
+import { RegisterResponse } from "../User/register/shared/register.response";
 
 @Injectable({
     providedIn: 'root'
@@ -20,9 +21,19 @@ export class UserService{
     loginRedirectUrl: string;
     logoutRedirectUrl: string;
     private roles: string[];
+    private message :boolean
 
     constructor(private http: HttpClient, public jwtHelper: JwtHelperService) {
   
+    }
+
+    register(model: any): Observable<any>{
+      return this.http.post(this.baseUrl + 'register', model)
+      .pipe(
+        map((response: RegisterResponse) => {
+            return this.progressRegisterResponse(response)
+        })
+      )
     }
     
     login(model: any): Observable<any> {
@@ -32,6 +43,15 @@ export class UserService{
             return this.processLoginResponse(response);
           })
         );
+    }
+
+    progressRegisterResponse(response: RegisterResponse){
+      const message = response.message
+      if(message === false){
+        throw new Error("Register false")
+      }
+      this.message = message 
+
     }
 
     processLoginResponse(response: LoginResponse){

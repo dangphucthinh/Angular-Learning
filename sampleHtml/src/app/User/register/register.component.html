@@ -1,1 +1,35 @@
-<p>register works!</p>
+<div class="example">
+    <form class="k-form" [formGroup]="form">
+        <fieldset class="k-form-fieldset">
+            <legend class="k-form-legend">Your account</legend>
+
+            <!-- <kendo-avatar initials="EG" width="80px" height="80px" shape="circle"></kendo-avatar> -->
+            <kendo-formfield>
+                <kendo-label [for]="username" text="Username"></kendo-label>
+                <!-- <input formControlName="username" #username required kendoTextBox [(ngModel)] = "userModel.username"> -->
+
+                <kendo-textbox formControlName="username" placeholder="Your username" #username required></kendo-textbox>
+
+                <!-- <kendo-formerror *ngIf="form.controls.username.errors?.minlength">Username has to be at least 3 characters</kendo-formerror>
+                <kendo-formerror *ngIf="form.controls.username.errors?.required">Error: Username is required</kendo-formerror> -->
+                <app-message-control [control]="form.get('username')"></app-message-control>
+            </kendo-formfield>
+            <kendo-formfield>
+                <kendo-label [for]="password" text="Password"> </kendo-label>
+                <kendo-textbox formControlName="password" #password required [clearButton]="true" placeholder="Your password">
+                    <ng-template kendoTextBoxSuffixTemplate>
+                        <button kendoButton look="clear" icon="eye" (click)="toggleVisibility()"></button>
+                    </ng-template>
+                </kendo-textbox>
+
+                <!-- <kendo-formhint>Your password</kendo-formhint> -->
+                <app-message-control [control]="form.get('password')"></app-message-control>
+            </kendo-formfield>
+
+            <div class="k-form-buttons">
+                <button class="k-button k-primary" (click)="onRegister()">Login</button> 
+                <button class="k-button" (click)="onClear()">Clear</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

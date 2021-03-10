@@ -18,14 +18,14 @@ export class LoginComponent{
 
     //set type of password is 'password'
     public ngAfterViewInit(): void {
-        this.textbox.input.nativeElement.type = 'password';
-    } 
-
-    //can switch password between 'password' and 'text'
-    public toggleVisibility(): void {
-        const inputEl = this.textbox.input.nativeElement;
-        inputEl.type = inputEl.type === 'password' ? 'text' : 'password';
-    }
+     this.textbox.input.nativeElement.type = 'password';
+ } 
+ 
+ //can switch password between 'password' and 'text'
+ public toggleVisibility(): void {
+     const inputEl = this.textbox.input.nativeElement;
+     inputEl.type = inputEl.type === 'password' ? 'text' : 'password';
+ }
     public userModel : UserLogin = new UserLogin()
     constructor(
     private userService: UserService,
@@ -55,11 +55,9 @@ export class LoginComponent{
                 })
             },
             error => {
-                this.toastr.error('Tên đăng nhập hoặc mật khẩu không đúng!');
+                this.toastr.error('concac');
             }
-
         )
-
     }
 
       public clearForm(): void {
