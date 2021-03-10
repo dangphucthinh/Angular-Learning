@@ -1,12 +1,15 @@
-export class LoginResponse {
+export interface LoginResponse {
     access_token: string;
-    user: UserReponse;
+    user: UserResponse;
 }
 
-export interface UserReponse {
-    id: number;
-    username: string;
+
+export interface UserResponse {
+    id: string;
     email: string;
+    username: string;
+    groupRole: string;
+    roles: string[];
 }
 
 export interface Token {

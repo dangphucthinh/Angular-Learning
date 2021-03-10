@@ -17,7 +17,14 @@ import { IndexComponent } from './Component/index/index.component';
 import { LoginComponent } from './User/login/login.component';
 import { RegisterComponent } from './User/register/register.component';
 import { MessageControlComponent } from './Component/message-control/message-control.component';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
+import { ACCESS_TOKEN } from './Utilities/UtilsRegex';
 
+export function tokenGetter() {
+  return localStorage.getItem(ACCESS_TOKEN);
+}
 
 
 @NgModule({
@@ -35,6 +42,7 @@ import { MessageControlComponent } from './Component/message-control/message-con
     BrowserModule,
     ButtonsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     DropDownsModule,
     InputsModule,
@@ -43,7 +51,22 @@ import { MessageControlComponent } from './Component/message-control/message-con
     DateInputsModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    ToastrModule.forRoot(), // ToastrModule added
+    NgbModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+          whitelistedDomains: [
+              'localhost:55992',
+              'localhost:55992',
+              '52.77.233.77:55992'
+          ],
+          blacklistedRoutes: [
+              'localhost:55992/api/auth/login',
+              'localhost:55992/api/auth/login'
+          ]
+      }
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]
