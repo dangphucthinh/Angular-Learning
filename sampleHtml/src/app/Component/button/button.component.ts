@@ -3,9 +3,8 @@ import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-button',
-  // styles : ["src/styles.css"],
   templateUrl: './button.component.html',
-  // styleUrls: ['./button.component.css']
+  styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
   public firstName: string;

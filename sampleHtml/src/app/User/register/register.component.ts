@@ -44,7 +44,6 @@ public toggleVisibility(): void {
   onRegister(): void{
     console.log(this.form.value);
     
-    debugger
       this.userService.register(this.form.value).subscribe(
         response =>{
           this.router.navigate(['/input']).then(()=>{

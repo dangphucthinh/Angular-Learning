@@ -1,3 +1,18 @@
+$primary: #1144ec;
+$button-text: #000000;
+$default: #0e39f8;
+
+// styles.scss
+@import "~@progress/kendo-theme-default/dist/all.scss";
+
+.k-button.k-bare, .k-button.k-bare:hover{
+    color: $button-text;
+}
+
+
+
+
+
 /* You can add global styles to this file, and also import other style files */
 body{
     /* background-color: #04c582;; */
@@ -140,6 +155,11 @@ div.form-group.required>label:first-child:after{
 .example {
     display: flex;
     justify-content: center;
+    button{
+        min-width: 100px;
+        min-height: 40px;
+        border-radius: 3px;
+    }
 }
 
 .k-form kendo-label:not(:last-of-type) {
@@ -192,10 +212,6 @@ div.form-group.required>label:first-child:after{
     margin : 10px 50px 10px 50px; 
 }
 
-.example {
-    display: flex;
-    justify-content: center;
-}
 
 .k-form kendo-label:not(:last-of-type) {
     flex-direction: column;
