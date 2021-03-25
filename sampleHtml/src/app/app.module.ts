@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { ProgressBarModule } from '@progress/kendo-angular-progressbar';
-import { ButtonComponent } from './Component/button/button.component';
 import { InputComponent } from './Component/input/input.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LabelModule } from '@progress/kendo-angular-label';
@@ -21,6 +20,13 @@ import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ACCESS_TOKEN } from './Utilities/UtilsRegex';
+import {
+  DxTextBoxModule,
+  DxValidatorModule,
+  DxValidationSummaryModule,
+  DxValidationGroupModule,
+  DxButtonModule
+} from 'devextreme-angular';
 
 export function tokenGetter() {
   return localStorage.getItem(ACCESS_TOKEN);
@@ -30,13 +36,12 @@ export function tokenGetter() {
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent,
     InputComponent,
     IndexComponent,
     LoginComponent,
     LoginComponent,
     RegisterComponent,
-    MessageControlComponent
+    MessageControlComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,11 @@ export function tokenGetter() {
     ReactiveFormsModule,
     ToastrModule.forRoot(), // ToastrModule added
     NgbModule,
+    DxTextBoxModule,
+    DxValidatorModule,
+    DxValidationSummaryModule,
+    DxValidationGroupModule,
+    DxButtonModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

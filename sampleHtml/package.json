@@ -36,6 +36,8 @@
     "@progress/kendo-drawing": "^1.5.12",
     "@progress/kendo-licensing": "^1.1.1",
     "@progress/kendo-theme-default": "^4.34.0",
+    "devextreme": "20.2.5",
+    "devextreme-angular": "20.2.5",
     "ngx-toastr": "^13.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
