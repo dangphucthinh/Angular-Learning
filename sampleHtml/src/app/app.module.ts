@@ -27,6 +27,7 @@ import {
   DxValidationGroupModule,
   DxButtonModule
 } from 'devextreme-angular';
+import { LandingpageComponent } from './Component/landingpage/landingpage.component';
 
 export function tokenGetter() {
   return localStorage.getItem(ACCESS_TOKEN);
@@ -42,6 +43,7 @@ export function tokenGetter() {
     LoginComponent,
     RegisterComponent,
     MessageControlComponent,
+    LandingpageComponent,
   ],
   imports: [
     BrowserModule,
