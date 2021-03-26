@@ -227,3 +227,13 @@ label {
 .site-main {
     padding-top: 49px; /* Height of Site Header */
 }
+
+// animation
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
