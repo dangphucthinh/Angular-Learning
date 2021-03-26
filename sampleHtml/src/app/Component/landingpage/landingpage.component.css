@@ -23,6 +23,8 @@
 .header__navbar-items{
     margin: 0 8px;
     position: relative;
+    margin-top: 4px;
+    min-height: 26px;
 }
 
 .header__navbar-items,
@@ -34,8 +36,16 @@
     font-weight: 300;
 }
 
+.header__navbar-items,
+.header__navbar-item-link,
+.header__navbar-icon-link{
+    display: inline-block;
+    align-items: center;
+}
+
 .header__navbar-items:hover,
-.header__navbar-item-link:hover{
+.header__navbar-item-link:hover,
+.header__navbar-icon:hover{
     color: rgba(255,255,255,0.7);
     cursor: pointer;
 }
@@ -58,4 +68,15 @@
 .header__navbar-icon-link{
     color: #fff;
     text-decoration: none;
+}
+
+.header__navbar-icon{
+    font-size: 16px;
+    margin: 0 2px;
+}
+
+.header__navbar-title--nopointer{
+    cursor: text;
+    color: #fff;
+    margin: 0 2px;
 }

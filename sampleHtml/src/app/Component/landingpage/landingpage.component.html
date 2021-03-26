@@ -8,10 +8,10 @@
                         Vào cửa hàng trên ứng dụng
                     </li>
                     <li class="header__navbar-items">
-                        Kết nối
+                        <span class="header__navbar-title--nopointer">Kết nối</span>
                         <a href="" class="header__navbar-icon-link">
-                            <fa-icon [icon]="faFacebook"></fa-icon>
-                            <fa-icon [icon]="faInstagram"></fa-icon>
+                            <fa-icon class="header__navbar-icon" [icon]="faFacebook"></fa-icon>
+                            <fa-icon class="header__navbar-icon" [icon]="faInstagram"></fa-icon>
                         </a>
                     </li>
                 </ul>
@@ -20,17 +20,17 @@
                     <li class="header__navbar-items">
                         <a href="#" class="header__navbar-item-link">
                             Thông báo
-                            <fa-icon [icon]="faBell"></fa-icon>
+                            <fa-icon class="header__navbar-icon" [icon]="faBell"></fa-icon>
                         </a>
                     </li>
                     <li class="header__navbar-items">
                         <a href="" class="header__navbar-item-link">
                             Trợ giúp
-                            <fa-icon [icon]="faCircle"></fa-icon>
+                            <fa-icon class="header__navbar-icon" [icon]="faCircle"></fa-icon>
                         </a>
-                    </li>
-                    <li class="header__navbar-items header__navbar-items--bold header__navbar-items--separate">Đăng ký</li>
-                    <li class="header__navbar-items header__navbar-items--bold">Đăng nhập</li>
+                    </li> 
+                    <li class="header__navbar-items header__navbar-items--bold header__navbar-items--separate" routerLinkActive="active" routerLink = "/user/register">Đăng ký</li>
+                    <li class="header__navbar-items header__navbar-items--bold" routerLinkActive="active" routerLink = "/user/login">Đăng nhập</li>
                 </ul>
             </nav>
         </div>
