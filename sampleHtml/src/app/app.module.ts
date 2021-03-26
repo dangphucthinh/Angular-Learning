@@ -20,14 +20,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ACCESS_TOKEN } from './Utilities/UtilsRegex';
-import {
-  DxTextBoxModule,
-  DxValidatorModule,
-  DxValidationSummaryModule,
-  DxValidationGroupModule,
-  DxButtonModule
-} from 'devextreme-angular';
 import { LandingpageComponent } from './Component/landingpage/landingpage.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 export function tokenGetter() {
   return localStorage.getItem(ACCESS_TOKEN);
@@ -47,6 +41,7 @@ export function tokenGetter() {
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     ButtonsModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -60,11 +55,6 @@ export function tokenGetter() {
     ReactiveFormsModule,
     ToastrModule.forRoot(), // ToastrModule added
     NgbModule,
-    DxTextBoxModule,
-    DxValidatorModule,
-    DxValidationSummaryModule,
-    DxValidationGroupModule,
-    DxButtonModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
