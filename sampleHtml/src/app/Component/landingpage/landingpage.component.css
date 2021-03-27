@@ -137,3 +137,48 @@
 .header_qr-link-chplay{
     height: 18px;
 }
+
+/*-----------------------------------------------------------------------------
+    ` NOTIFICATION
+-----------------------------------------------------------------------------*/
+.header__notification{
+    position: absolute;
+    top: 118%;
+    width: 404px;
+    background: #fff;
+    right: 0;
+    border: 1px solid #d3d3d3;
+}
+
+.header__notification-header{
+    height: 40px;
+    background-color: #fff;
+}
+
+.header__notification-header h3{
+    color: #666;    
+    margin: 0 0 0 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.header__notification-list{
+    padding-left: 0;
+}
+
+.header__notification-items{
+    display: flex;
+}
+
+.header__notification-link{
+    display: flex;
+}
+
+.header__notification_img{
+    width: 48px;
+}
+
+.header__notification_description{
+
+}
