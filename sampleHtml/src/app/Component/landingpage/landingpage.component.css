@@ -34,6 +34,10 @@
     display: block;
 }
 
+.header__navbar-items--has-notify:hover .header__notification{
+    display: block;
+}
+
 .header__navbar-items,
 .header__navbar-item-link{
     display: inline-block;
@@ -148,6 +152,21 @@
     background: #fff;
     right: 0;
     border: 1px solid #d3d3d3;
+    cursor: default;
+    transform-origin: cal(100% - 20px) top;
+    animation: headerNotificationGrowth ease-in 0.3s;
+    display: none;
+}
+
+@keyframes headerNotificationGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .header__notification-header{
@@ -161,6 +180,8 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 40px;
+    cursor: text;
+    user-select: none;
 }
 
 .header__notification-list{
@@ -209,10 +230,17 @@
 }
 
 .header__notification-footer{
-    text-align: center;
+    justify-content: center;
 }
 
 .header__notification-footer-btn{
     text-decoration: none;
-    padding: 16px 16px;
+    color: #666;
+    width: 100%;
+    padding: 8px 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    display: block;
 }
