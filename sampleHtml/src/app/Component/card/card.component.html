@@ -1,0 +1,8 @@
+<p>card works!</p>
+<div class={{card.color}} >
+    <div class="card-body">
+      <h4 class="card-title"> {{card.title}} </h4>
+      <p class="card-text">Some example text. Some example text.</p>
+      <button *ngFor="let btn of card.buttons" type="button"   class={{btn.bootstrapClass}}>{{btn.title}}</button>
+    </div>
+  </div>

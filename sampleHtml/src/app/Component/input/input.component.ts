@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Cards } from 'src/app/interfaces/card';
 import { isCheckEmail } from 'src/app/Utilities/UtilsRegex';
 
 @Component({
@@ -7,8 +8,8 @@ import { isCheckEmail } from 'src/app/Utilities/UtilsRegex';
   templateUrl: './input.component.html',
   // styleUrls: ['./input.component.css']
 })
-export class InputComponent implements OnInit {
-
+export class InputComponent{
+  cards = Cards;
   public textBoxValue =  ''
   public form: FormGroup
   public contactRegex = /^\d{8,12}$/
@@ -38,8 +39,7 @@ export class InputComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-  }
+
 
   onClick(){
     this.isClick = !this.isClick
