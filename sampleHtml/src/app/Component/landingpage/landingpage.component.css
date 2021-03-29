@@ -158,6 +158,26 @@
     display: none;
 }
 
+.header__notification::before{
+    content: "";
+    border: solid;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    right: 16px;
+    top: -28px;
+    border-width: 20px 27px;
+}
+
+.header__notification::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 20px;
+    top: -10px;
+}
+
 @keyframes headerNotificationGrowth{
     from{
         opacity: 0;
