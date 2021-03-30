@@ -5,6 +5,7 @@ import { IndexComponent } from './Component/index/index.component';
 import { LoginComponent } from './User/login/login.component';
 import { RegisterComponent } from './User/register/register.component';
 import { LandingpageComponent } from './Component/landingpage/landingpage.component';
+import { AuthGuardService } from './Services/guard.service';
 
 export const routes: Routes = [
 
@@ -20,7 +21,7 @@ export const routes: Routes = [
         ]
     },
     {
-        path: '', component: LandingpageComponent,
+        path: '', component: LandingpageComponent, canActivate: [AuthGuardService],
 
     },
 ];

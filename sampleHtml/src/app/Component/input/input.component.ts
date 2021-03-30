@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/Services/auth.service';
+import { Cards } from 'src/app/interfaces/card';
 import { isCheckEmail } from 'src/app/Utilities/UtilsRegex';
 
 @Component({
@@ -10,8 +11,8 @@ import { isCheckEmail } from 'src/app/Utilities/UtilsRegex';
   templateUrl: './input.component.html',
   // styleUrls: ['./input.component.css']
 })
-export class InputComponent implements OnInit {
-
+export class InputComponent{
+  cards = Cards;
   public textBoxValue =  ''
   public form: FormGroup
   public contactRegex = /^\d{8,12}$/
@@ -43,8 +44,7 @@ export class InputComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-  }
+
 
   onClick(){
     this.isClick = !this.isClick
@@ -52,7 +52,7 @@ export class InputComponent implements OnInit {
 
   logout() {
     this.authService.logout();
-    this.router.navigate(['/login']).then(() => {
+    this.router.navigate(['/user/login']).then(() => {
         this.toastr.success('Đăng xuất thành công!');
     });
 }

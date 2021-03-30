@@ -69,6 +69,10 @@
                 >
                 Edit
             </button>
+
+            <card *ngFor="let card of cards"
+                [card]="card">
+            </card>
             </div>
         </div>
     </div>

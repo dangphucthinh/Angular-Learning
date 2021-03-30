@@ -23,6 +23,8 @@ import { ACCESS_TOKEN } from './Utilities/UtilsRegex';
 import { LandingpageComponent } from './Component/landingpage/landingpage.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AuthGuardService } from './Services/guard.service';
+import { ModalComponent } from './Component/modal/modal.component';
+import { CardComponent } from './Component/card/card.component';
 
 export function tokenGetter() {
   return localStorage.getItem(ACCESS_TOKEN);
@@ -39,6 +41,8 @@ export function tokenGetter() {
     RegisterComponent,
     MessageControlComponent,
     LandingpageComponent,
+    ModalComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
