@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { UserService } from 'src/app/Services/auth.service';
 import { isCheckEmail } from 'src/app/Utilities/UtilsRegex';
 
 @Component({
@@ -28,7 +31,9 @@ export class InputComponent implements OnInit {
   public listItems: Array<string> = ['Small', 'Medium', 'Large'];
   public selectedValue = 'Male';
 
-  constructor() { 
+  constructor(public authService: UserService,
+    private toastr: ToastrService,
+    private router: Router) { 
     const contactRegex = /^\d{8,12}$/
       this.form = new FormGroup({
       fullName: new FormControl(this.data.fullName, [Validators.required]),
@@ -44,4 +49,11 @@ export class InputComponent implements OnInit {
   onClick(){
     this.isClick = !this.isClick
   }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']).then(() => {
+        this.toastr.success('Đăng xuất thành công!');
+    });
+}
 }

@@ -7,7 +7,6 @@ import {
   Route
 } from '@angular/router';
 import { UserService } from './auth.service';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
