@@ -13,49 +13,52 @@
                         <label>
                             Name*
                             <div class="field-value" *ngIf="this.isClick">
-                            {{this.data.fullName}}
+                                {{this.data.fullName}}
                             </div>
                             <div *ngIf="!this.isClick">
-                            <input formControlName="fullName" [(ngModel)]="this.data.fullName">
+                                <input formControlName="fullName" [(ngModel)]="this.data.fullName">
                             </div>
                         </label>
                     </div>
-            
+
                     <div class="grid__block">
                         <label>
                             Email*
                             <div class="field-value" *ngIf="this.isClick">
-                            {{this.data.email}}
+                                {{this.data.email}}
                             </div>
                             <div *ngIf="!this.isClick">
-                            <input formControlName="email" [(ngModel)]="this.data.email">
+                                <input formControlName="email" [(ngModel)]="this.data.email">
                             </div>
                         </label>
                     </div>
-            
+
                     <div class="grid__block">
                         <label>
                             Phone number*
                             <div class="field-value" *ngIf="this.isClick">
-                            {{this.data.phoneNumber}}
+                                {{this.data.phoneNumber}}
                             </div>
                             <div *ngIf="!this.isClick">
-                            <input formControlName="phoneNumber" [(ngModel)]="this.data.phoneNumber">
-                            <kendo-formhint>Your phone number</kendo-formhint>
-                            <kendo-formerror *ngIf="form.controls.phoneNumber.errors?.pattern">It should be numberic</kendo-formerror>
-                            <kendo-formerror *ngIf="form.controls.phoneNumber.errors?.required">Error: Phone number is required</kendo-formerror>
+                                <input formControlName="phoneNumber" [(ngModel)]="this.data.phoneNumber">
+                                <kendo-formhint>Your phone number</kendo-formhint>
+                                <kendo-formerror *ngIf="form.controls.phoneNumber.errors?.pattern">It should be numberic
+                                </kendo-formerror>
+                                <kendo-formerror *ngIf="form.controls.phoneNumber.errors?.required">Error: Phone number
+                                    is required</kendo-formerror>
                             </div>
                         </label>
                     </div>
-            
+
                     <div class="grid__block">
                         <label>
                             Name*
                             <div class="field-value" *ngIf="this.isClick">
-                            {{selectedValue}}
+                                {{selectedValue}}
                             </div>
                             <div *ngIf="!this.isClick">
-                            <kendo-combobox formControlName= "gender" [data]="this.data.gender" [(ngModel)]="selectedValue"></kendo-combobox>
+                                <kendo-combobox formControlName="gender" [data]="this.data.gender"
+                                    [(ngModel)]="selectedValue"></kendo-combobox>
                             </div>
                         </label>
                     </div>
@@ -63,22 +66,23 @@
             </form>
 
             <div class="example">
-                <button
-                kendoButton [primary] = "true" 
-                (click)= "logout()"
-                >
-                Edit
-            </button>
+                <!-- <card *ngFor="let card of cards" [card]="card">
+                </card> -->
+                <p>
+                    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+                            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                      Collapse Toggle
+                    </button>
+                  </p>
+                  <div id="collapseExample" [ngbCollapse]="isCollapsed">
+                    <div class="card">
+                      <div class="card-body">
+                        You can collapse this card by clicking Toggle Button. This is example from ItSolutionStuff.com.
+                      </div>
+                    </div>
+                  </div>
 
-            <card *ngFor="let card of cards"
-                [card]="card">
-            </card>
             </div>
         </div>
     </div>
 </main>
-
-
-
-
-

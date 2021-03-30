@@ -30,6 +30,7 @@ export class InputComponent{
     };
 
   public listItems: Array<string> = ['Small', 'Medium', 'Large'];
+  public isCollapsed = false;
   public selectedValue = 'Male';
 
   constructor(public authService: UserService,
