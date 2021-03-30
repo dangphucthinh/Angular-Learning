@@ -71,7 +71,7 @@ export class UserService{
           userResponse.roles
         )
 
-
+        console.log(this.currentUser);
         localStorage.setItem(ACCESS_TOKEN, token)
         localStorage.setItem(CURRENT_USER, JSON.stringify(this.currentUser))
     }

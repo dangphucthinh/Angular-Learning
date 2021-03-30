@@ -93,10 +93,18 @@
                     </li> 
                     <li class="header__navbar-items header__navbar-items--bold header__navbar-items--separate" routerLinkActive="active" routerLink = "/user/register">Đăng ký</li>
                     <li class="header__navbar-items header__navbar-items--bold" routerLinkActive="active" routerLink = "/user/login">Đăng nhập</li>
+                    <li class="header__navbar-items header__navbar-items--bold">
+                        <p>{{getName}}</p>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="container"></div>
+    <div class="container">
+        <button class="btn btn-primary"
+        (click)="onClick()">
+            cac
+        </button>
+    </div>
     <footer class="footer"></footer>
 </div>
